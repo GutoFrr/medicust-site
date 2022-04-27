@@ -44,7 +44,7 @@ const Container = styled.div`
       line-height: 18px;
       color: #fff;
       text-align: center;
-      transition: all 0.2s;
+      transition: all 0.3s;
       cursor: pointer;
 
       &:hover {
@@ -52,7 +52,7 @@ const Container = styled.div`
       }
 
       &:active {
-        transition: all 0.1s;
+        transition: all 0.2s;
         background: ${props => props.theme.maincolor.primary};
         box-shadow: 0px 10px 50px 0.2px #04122c;
       }

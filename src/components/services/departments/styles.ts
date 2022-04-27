@@ -1,19 +1,19 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 1200px;
+  width: 1172px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 104px;
 
   .department-item {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 300px;
+    width: 25%;
     height: 293px;
     background: #ffffff;
     border: 2px solid #eff3f6;
@@ -33,6 +33,7 @@ const Container = styled.div`
       border-radius: 50%;
       padding: 30px;
       color: ${props => props.theme.maincolor.primary};
+      cursor: pointer;
       transition: all 0.2s;
 
       .department-icon {

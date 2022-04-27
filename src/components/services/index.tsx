@@ -2,6 +2,7 @@
 import React from 'react'
 import Container from './styles'
 import Departments from './departments'
+import Advertising from '../advertising'
 
 const Services = () => {
   return (
@@ -15,10 +16,11 @@ const Services = () => {
             laborum.
           </p>
         </div>
-        <div className="departments-container">
-          <Departments />
+        <div>
+          <Departments icon={''} department={''} />
         </div>
       </div>
+      <Advertising />
     </Container>
   )
 }

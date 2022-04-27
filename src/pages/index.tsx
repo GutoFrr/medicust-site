@@ -6,6 +6,8 @@ import Hero from '../components/hero'
 import Header from '../components/header'
 import CTA from '../components/CTA'
 import Services from '../components/services'
+import TeamMembers from '../components/team-members'
+import Call from '../components/call'
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +19,8 @@ const Home: React.FC = () => {
       <Hero />
       <CTA />
       <Services icon={''} department={''} />
+      <TeamMembers />
+      <Call />
     </Container>
   )
 }

@@ -1,5 +1,66 @@
 import styled from 'styled-components'
 
-const Container = styled.div``
+const Container = styled.div`
+  .advertising {
+    width: 1172px;
+    height: 508px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -119px;
+    background: ${props => props.theme.maincolor.secundary};
+    margin-bottom: 119px;
+  }
+
+  .advertising-text {
+    display: flex;
+    flex-direction: column;
+    padding: 88px 0 88px 54px;
+
+    h6 {
+      font: 500 18px 'Ubuntu', sans-serif;
+      line-height: 55px;
+      color: #00ffc0;
+      margin-bottom: 9px;
+    }
+
+    h2 {
+      font: 700 45px 'Ubuntu', sans-serif;
+      line-height: 56px;
+      color: #fff;
+      margin-bottom: 35.5px;
+      width: 459px;
+    }
+
+    .advertising-btn {
+      width: 198px;
+      height: 58px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font: 500 16px 'Ubuntu', sans-serif;
+      line-height: 18px;
+      color: #fff;
+      background: ${props => props.theme.maincolor.primary};
+      border: 2px solid ${props => props.theme.maincolor.primary};
+      border-radius: 50px;
+      transition: all 0.2s;
+
+      &:hover {
+        background: ${props => props.theme.maincolor.secundary};
+      }
+
+      &:active {
+        transition: all 0.2s;
+        background: ${props => props.theme.maincolor.primary};
+        box-shadow: 0px 10px 50px 0.2px #04122c;
+      }
+    }
+  }
+
+  .video {
+    padding: 20px 20px 20px 0;
+  }
+`
 
 export default Container

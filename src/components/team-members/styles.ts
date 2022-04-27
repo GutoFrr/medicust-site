@@ -1,37 +1,29 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .services {
-    height: 1137px;
-    padding: 0 19.5vw;
-    background: #f8f8f8;
-  }
-
-  .services-title {
+  .team-members {
+    height: 903px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 110px 0 78px 0;
+  }
+
+  .members-title {
     text-align: center;
 
     h3 {
-      color: ${props => props.theme.maincolor.secundary};
       font: 700 42px 'Ubuntu', sans-serif;
       line-height: 55px;
+      color: ${props => props.theme.maincolor.secundary};
       margin-bottom: 25.5px;
     }
 
     p {
-      color: #454d5d;
+      width: 608px;
       font: 400 16px 'Ubuntu', sans-serif;
       line-height: 30px;
-      width: 608px;
+      color: #454d5d;
     }
   }
 `
