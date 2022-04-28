@@ -16,7 +16,7 @@ const TeamMembers = () => {
               laborum.
             </p>
           </div>
-          {/* <Members picture={''} name={''} role={''} /> */}
+          <Members />
         </div>
       </Layout>
     </Container>

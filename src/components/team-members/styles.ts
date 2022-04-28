@@ -2,15 +2,14 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   .team-members {
-    height: 903px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
   }
 
   .members-title {
     text-align: center;
+    margin-bottom: 88px;
 
     h3 {
       font: 700 42px 'Ubuntu', sans-serif;

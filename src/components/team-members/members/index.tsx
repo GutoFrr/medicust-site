@@ -2,12 +2,10 @@
 import React from 'react'
 import Container from './styles'
 import membersArray from './membersData'
-import Layout from '../../layout/styles'
 
 interface MembersProps {
-  picture: string
-  name: string
-  role: string
+  name?: string
+  role?: string
 }
 
 const Members: React.FC<MembersProps> = () => {
@@ -15,17 +13,20 @@ const Members: React.FC<MembersProps> = () => {
     <Container>
       {membersArray.map(item => (
         <div className="member-item">
-          <img
-            src={item.picture}
-            alt="Foto do Profissional"
-            className="member-pic"
-          />
+          <div className="member-image"></div>
           <div className="member-description">
             <h3>{item.name}</h3>
             <h6>{item.role}</h6>
           </div>
         </div>
       ))}
+      <div className="join-card">
+        <h4>Join our team</h4>
+        <p>
+          Lorem ipsum dolor amet consectetur adipiscing elit sed eiusmod tempor
+        </p>
+        <div className="orange-elipse"></div>
+      </div>
     </Container>
   )
 }

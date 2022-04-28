@@ -17,6 +17,7 @@ const Container = styled.div`
     height: 293px;
     background: #ffffff;
     border: 2px solid #eff3f6;
+    transition: all 0.3s;
 
     h4 {
       font: 700 28px 'Ubuntu', sans-serif;
@@ -45,6 +46,10 @@ const Container = styled.div`
         color: #ffffff;
         background: ${props => props.theme.maincolor.primary};
       }
+    }
+
+    :hover {
+      border: 2px solid ${props => props.theme.maincolor.primary};
     }
   }
 

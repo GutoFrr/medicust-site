@@ -17,7 +17,7 @@ const Services = () => {
           </p>
         </div>
         <div>
-          <Departments icon={''} department={''} />
+          <Departments />
         </div>
       </div>
       <Advertising />

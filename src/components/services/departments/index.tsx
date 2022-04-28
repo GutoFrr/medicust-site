@@ -5,8 +5,8 @@ import departmentArray from './departmentsData'
 import { Icon } from '@iconify/react'
 
 interface ServicesProps {
-  icon: string
-  department: string
+  icon?: string
+  department?: string
 }
 
 const Departments: React.FC<ServicesProps> = () => {
