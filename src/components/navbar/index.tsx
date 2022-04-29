@@ -2,11 +2,12 @@
 import React from 'react'
 import Container from './styles'
 import navArray from './navData'
+import Link from 'next/link'
 
 import logo from '../../assets/hero-images/logo.png'
 
 interface NavProps {
-  menuItem: string
+  menuItem?: string
 }
 
 const Navbar: React.FC<NavProps> = () => {
@@ -16,7 +17,9 @@ const Navbar: React.FC<NavProps> = () => {
         <img src={logo} alt="Logo Medicust" className="logo" />
         <ul className="nav-menu">
           {navArray.map(item => (
-            <li className="menu-item">{item.menuItem}</li>
+            <Link href={'#' + item.menuItem}>
+              <li className="menu-item">{item.menuItem}</li>
+            </Link>
           ))}
         </ul>
         <button className="nav-btn">Get Appoinment</button>

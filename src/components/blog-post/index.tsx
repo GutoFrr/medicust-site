@@ -7,7 +7,7 @@ const BlogPost = () => {
   return (
     <Container>
       <Layout>
-        <div className="blog-post">
+        <div className="blog-post" id="Blog">
           <div className="blog-banner">
             <h2>Get Every Single Updates Here.</h2>
             <p>

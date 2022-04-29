@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useState } from 'react'
 import Container from './styles'
 import departmentArray from './departmentsData'
@@ -11,14 +10,26 @@ interface ServicesProps {
 
 const Departments: React.FC<ServicesProps> = () => {
   const [activeIcon, setActiveIcon] = useState(false)
-  const handleIconClick = () => setActiveIcon(!activeIcon)
+  const [selected, setSelected] = useState(0)
+  const handleIconClick = key => {
+    if (selected === key) {
+      setActiveIcon(false)
+    } else {
+      setActiveIcon(true)
+    }
+
+    setSelected(key)
+  }
 
   return (
     <Container>
-      {departmentArray.map(item => (
+      {departmentArray.map((item, key) => (
         <div
-          onClick={handleIconClick}
-          className={`department-item ${activeIcon ? 'active' : 'inactive'}`}
+          key={key}
+          onClick={() => handleIconClick(key)}
+          className={`department-item ${
+            activeIcon && key === selected ? 'active' : 'inactive'
+          }`}
         >
           <div className="icon-container">
             <Icon icon={item.icon} className="department-icon" />

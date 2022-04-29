@@ -7,7 +7,7 @@ import Advertising from '../advertising'
 const Services = () => {
   return (
     <Container>
-      <div className="services">
+      <div className="services" id="Department">
         <div className="services-title">
           <h3>Our All Department</h3>
           <p>
