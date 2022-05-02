@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react'
 interface ServicesProps {
   icon?: string
   department?: string
+  key?: number
 }
 
 const Departments: React.FC<ServicesProps> = () => {

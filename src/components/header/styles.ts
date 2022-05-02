@@ -10,6 +10,10 @@ const Container = styled.div`
     color: ${props => props.theme.maincolor.secundary};
     font: 500 16px 'Ubuntu', sans-serif;
     line-height: 18px;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   .end-text {
