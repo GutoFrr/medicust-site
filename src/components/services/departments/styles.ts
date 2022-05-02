@@ -1,19 +1,20 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
-  width: 1172px;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 223px;
 
   .department-item {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 25%;
+    width: 294px;
     height: 293px;
     background: #ffffff;
     border: 2px solid #eff3f6;

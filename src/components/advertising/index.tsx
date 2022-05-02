@@ -27,8 +27,6 @@ const Advertising = () => {
           </div>
           <div>
             <iframe
-              width="552"
-              height="468"
               src={url}
               title="YouTube video player"
               frameBorder="0"

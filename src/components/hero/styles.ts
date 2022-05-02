@@ -103,9 +103,9 @@ const Container = styled.div`
       }
 
       h1 {
-        font: 700 44px 'Ubuntu', sans-serif;
+        font: 700 40px 'Ubuntu', sans-serif;
         line-height: 48px;
-        width: 430px;
+        width: 400px;
       }
 
       .hero-btn {
@@ -131,19 +131,9 @@ const Container = styled.div`
       }
 
       h1 {
-        font: 700 40px 'Ubuntu', sans-serif;
+        font: 700 36px 'Ubuntu', sans-serif;
         line-height: 44px;
-        width: 420px;
-      }
-
-      .hero-btn {
-        width: 120px;
-        height: 35px;
-        font: 500 10px 'Ubuntu', sans-serif;
-
-        &:active {
-          box-shadow: 0px 10px 50px 0.01px #04122c;
-        }
+        width: 400;
       }
     }
   }

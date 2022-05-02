@@ -2,14 +2,12 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   .advertising {
-    width: 1172px;
-    height: 508px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
     margin-top: -119px;
     background: ${props => props.theme.maincolor.secundary};
     margin-bottom: 119px;
+    column-gap: 52px;
   }
 
   .advertising-text {
@@ -45,6 +43,7 @@ const Container = styled.div`
       border: 2px solid ${props => props.theme.maincolor.primary};
       border-radius: 50px;
       transition: all 0.2s;
+      cursor: pointer;
 
       &:hover {
         background: ${props => props.theme.maincolor.secundary};
@@ -59,7 +58,119 @@ const Container = styled.div`
   }
 
   .video {
+    width: 552px;
+    height: 468px;
     padding: 20px 20px 20px 0;
+  }
+
+  @media screen and (max-width: 1366px) {
+    .advertising-text {
+      h6 {
+        font: 500 16px 'Ubuntu', sans-serif;
+        line-height: 55px;
+        color: #00ffc0;
+        margin-bottom: 9px;
+      }
+
+      h2 {
+        font: 700 40px 'Ubuntu', sans-serif;
+        line-height: 56px;
+        color: #fff;
+        margin-bottom: 35.5px;
+      }
+
+      .advertising-btn {
+        width: 190px;
+        height: 58px;
+        font: 500 16px 'Ubuntu', sans-serif;
+        line-height: 18px;
+      }
+    }
+
+    .video {
+      width: 530px;
+      height: 440px;
+      padding-block: 10px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .advertising {
+      column-gap: 1vw;
+    }
+
+    .video {
+      width: 500px;
+      height: 410px;
+      padding: 0 20px 0 0;
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    .advertising-text {
+      h2 {
+        font: 700 32px 'Ubuntu', sans-serif;
+        line-height: 50px;
+        color: #fff;
+        margin-bottom: 35.5px;
+      }
+
+      .advertising-btn {
+        width: 170px;
+        height: 50px;
+        font: 500 14px 'Ubuntu', sans-serif;
+        line-height: 18px;
+      }
+    }
+
+    .video {
+      width: 460px;
+      height: 340px;
+      padding-block: 10px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .advertising {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .advertising-text {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .video {
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .advertising-text {
+      h2 {
+        font: 700 28px 'Ubuntu', sans-serif;
+        line-height: 45px;
+        color: #fff;
+        margin: 0;
+      }
+
+      .advertising-btn {
+        width: 170px;
+        height: 50px;
+        font: 500 14px 'Ubuntu', sans-serif;
+        line-height: 18px;
+        margin-top: 20px;
+      }
+    }
+
+    .video {
+      width: 440px;
+      height: 310px;
+    }
   }
 `
 

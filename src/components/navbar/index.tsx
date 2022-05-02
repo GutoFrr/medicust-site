@@ -31,7 +31,7 @@ const Navbar: React.FC<NavProps> = () => {
         </div>
         <img src={heartLogo} alt="Coração Medicust" className="heart-logo" />
         <div className="white-space"></div>
-        <button className="nav-btn">Get Appoinment</button>
+        <button className="nav-btn">Get Appointment</button>
       </div>
     </Container>
   )
