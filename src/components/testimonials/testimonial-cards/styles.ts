@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 
 const Container = styled.div`
+  width: 70vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  column-gap: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 
   .testimonial-item {
     width: 373px;
@@ -20,7 +23,8 @@ const Container = styled.div`
     transition: all 0.3s;
 
     :hover {
-      box-shadow: 0px 0px 18px rgba(10, 46, 114, 0.1784314);
+      box-shadow: 0px 0px 18px rgba(10, 46, 114, 0.2464314);
+      border: 2px solid transparent;
     }
   }
 

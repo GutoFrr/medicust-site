@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 117px;
   gap: 14px;
@@ -52,7 +52,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 272px;
+    width: 277px;
     height: 331px;
     background: ${props => props.theme.maincolor.primary};
     border-radius: 12px;

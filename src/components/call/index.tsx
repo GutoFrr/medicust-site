@@ -1,9 +1,6 @@
 import React from 'react'
 import Container from './styles'
 
-import blueElipse from '../../assets/call-images/blue-elipse.png'
-import orangeElipse from '../../assets/call-images/orange-elipse.png'
-
 const Call = () => {
   return (
     <Container>
@@ -11,26 +8,18 @@ const Call = () => {
         <div className="call-card">
           <h3>We always ready for a challenge.</h3>
           <div className="phone-number">
-            <img
-              src={blueElipse}
-              alt="Bola azul número de telefone"
-              className="elipse"
-            />
+            <div className="primary" />
             <h5>+00 568 467 46</h5>
           </div>
           <div className="email">
             <h5>medicust@gmail.com</h5>
-            <img
-              src={orangeElipse}
-              alt="Bola laranja email"
-              className="elipse"
-            />
+            <div className="orange" />
           </div>
         </div>
         <div className="call-text">
           <h5>
             Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eufugiat nulla pariatur.
+            cillum dolore eu fugiat nulla pariatur.
           </h5>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -3,22 +3,23 @@ import backgroundScribbles from '../../assets/testimonials-images/background-scr
 
 const Container = styled.div`
   .blog-post {
-    height: 583px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 117px;
   }
 
   .blog-banner {
+    width: 1172px;
     height: 183px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     background-color: ${props => props.theme.maincolor.secundary};
     background-image: url(${backgroundScribbles});
-    padding: 0 62px;
+    margin-bottom: 67px;
 
     h2 {
       width: 360px;
@@ -53,6 +54,50 @@ const Container = styled.div`
         width: 48px;
         height: 48px;
         border-radius: 50%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    .blog-banner {
+      width: 1100px;
+
+      h2 {
+        width: 30vw;
+        font: 700 40px 'Ubuntu', sans-serif;
+        line-height: 56px;
+      }
+
+      p {
+        width: 30vw;
+        font: 400 16px 'Ubuntu', sans-serif;
+        line-height: 25px;
+      }
+
+      .elipses {
+        width: 12vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .blog-banner {
+      width: 1000px;
+
+      h2 {
+        width: 27vw;
+        font: 700 36px 'Ubuntu', sans-serif;
+        line-height: 50px;
+      }
+
+      p {
+        width: 30vw;
+        font: 400 16px 'Ubuntu', sans-serif;
+        line-height: 25px;
+      }
+
+      .elipses {
+        width: 12vw;
       }
     }
   }

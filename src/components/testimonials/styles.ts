@@ -27,6 +27,65 @@ const Container = styled.div`
       color: #454d5d;
     }
   }
+
+  @media screen and (max-width: 1150px) {
+    .testimonials-title {
+      h3 {
+        font: 700 36px 'Ubuntu', sans-serif;
+        line-height: 36px;
+      }
+
+      p {
+        line-height: 30px;
+        width: 500px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .testimonials-title {
+      h3 {
+        font: 700 34px 'Ubuntu', sans-serif;
+        line-height: 34px;
+      }
+
+      p {
+        font: 400 15px 'Ubuntu', sans-serif;
+        line-height: 28px;
+        width: 500px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .testimonials-title {
+      h3 {
+        font: 700 30px 'Ubuntu', sans-serif;
+        line-height: 34px;
+      }
+
+      p {
+        font: 400 15px 'Ubuntu', sans-serif;
+        line-height: 28px;
+        width: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .testimonials-title {
+      h3 {
+        font: 700 28px 'Ubuntu', sans-serif;
+        line-height: 34px;
+      }
+
+      p {
+        font: 400 14px 'Ubuntu', sans-serif;
+        line-height: 28px;
+        width: auto;
+      }
+    }
+  }
 `
 
 export default Container
