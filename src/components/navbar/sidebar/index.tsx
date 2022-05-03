@@ -30,7 +30,9 @@ const Sidebar = () => {
         <div className="sidebar-items">
           {navArray.map(item => (
             <div className="sidebar-item">
-              <Icon icon={item.menuIcon} className="sidebar-icon" />
+              <div className="icon-container">
+                <Icon icon={item.menuIcon} className="sidebar-icon" />
+              </div>
               <h5>{item.menuItem}</h5>
             </div>
           ))}

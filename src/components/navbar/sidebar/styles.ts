@@ -8,22 +8,21 @@ const Container = styled.div`
   }
 
   .sidebar {
-    display: none;
     width: 26vw;
     height: 100%;
     position: fixed;
     right: 0;
     top: 0;
-    background: #fff;
+    background: #1f2122;
+    transition: all 0.3s;
   }
 
   .sidebar.active {
-    display: block;
+    right: -26vw;
   }
 
   .sidebar-title {
     height: 78px;
-    background: ${props => props.theme.maincolor.primary};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,12 +30,68 @@ const Container = styled.div`
     color: #f9f9f9;
 
     .close-icon {
+      font-size: 2.7vw;
+      border-radius: 15px;
+      transition: all 0.2s;
       cursor: pointer;
-      font-size: 2.4vw;
+
+      &:hover {
+        color: ${props => props.theme.maincolor.primary};
+      }
     }
 
     h4 {
       font: 700 16px 'Ubuntu', sans-serif;
+      cursor: pointer;
+    }
+  }
+
+  .sidebar-items {
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .sidebar-item {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    cursor: pointer;
+    background: #323437;
+    border-radius: 30px;
+    margin-block: 7px;
+    width: 120vw;
+    transition: all 0.3s;
+
+    .icon-container {
+      background: ${props => props.theme.maincolor.primary};
+      border-radius: 100px;
+      padding: 10px;
+      margin-right: 10px;
+      transition: all 0.3s;
+
+      .sidebar-icon {
+        color: #fff;
+        font-size: 2vw;
+        vertical-align: sub;
+        transition: all 0.3s;
+      }
+    }
+
+    h5 {
+      font: 600 14px 'Ubuntu', sans-serif;
+      color: #fff;
+    }
+
+    &:hover {
+      background: ${props => props.theme.maincolor.secundary};
+
+      .icon-container {
+        background: #292b2c;
+
+        .sidebar-icon {
+          color: ${props => props.theme.maincolor.primary};
+        }
+      }
     }
   }
 
@@ -53,6 +108,10 @@ const Container = styled.div`
 
     .sidebar {
       left: 0;
+    }
+
+    .sidebar.active {
+      left: -26vw;
     }
   }
 `

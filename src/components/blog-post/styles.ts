@@ -16,9 +16,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: center;
     background-color: ${props => props.theme.maincolor.secundary};
     background-image: url(${backgroundScribbles});
+    background-repeat: no-repeat;
     margin-bottom: 67px;
 
     h2 {
@@ -86,7 +87,7 @@ const Container = styled.div`
 
       h2 {
         width: 27vw;
-        font: 700 36px 'Ubuntu', sans-serif;
+        font: 700 34px 'Ubuntu', sans-serif;
         line-height: 50px;
       }
 
@@ -98,6 +99,71 @@ const Container = styled.div`
 
       .elipses {
         width: 12vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .blog-banner {
+      width: 100vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      background-size: cover;
+      text-align: center;
+      padding: 24px 0;
+
+      h2 {
+        width: 30vw;
+        font: 700 32px 'Ubuntu', sans-serif;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 40vw;
+        font: 400 16px 'Ubuntu', sans-serif;
+        line-height: 25px;
+      }
+
+      .elipses {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .blog-banner {
+      h2 {
+        width: 40vw;
+        font: 700 30px 'Ubuntu', sans-serif;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 50vw;
+        font: 400 15px 'Ubuntu', sans-serif;
+        line-height: 24px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .blog-banner {
+      h2 {
+        width: 50vw;
+        font: 700 28px 'Ubuntu', sans-serif;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 60vw;
+        font: 400 15px 'Ubuntu', sans-serif;
+        line-height: 24px;
       }
     }
   }
