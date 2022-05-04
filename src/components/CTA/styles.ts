@@ -152,6 +152,22 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 470px) {
+    .cta {
+      h2 {
+        font: 700 22px 'Ubuntu', sans-serif;
+        line-height: 30px;
+        width: 80vw;
+      }
+
+      .cta-btn {
+        height: 55px;
+        min-width: 160px;
+        font: 700 18px 'Ubuntu', sans-serif;
+      }
+    }
+  }
 `
 
 export default Container

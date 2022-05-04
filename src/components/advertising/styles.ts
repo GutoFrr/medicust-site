@@ -173,6 +173,29 @@ const Container = styled.div`
       height: 310px;
     }
   }
+
+  @media screen and (max-width: 470px) {
+    .advertising-text {
+      h2 {
+        font: 700 26px 'Ubuntu', sans-serif;
+        line-height: 45px;
+        width: 90vw;
+      }
+
+      .advertising-btn {
+        width: 170px;
+        height: 50px;
+        font: 500 14px 'Ubuntu', sans-serif;
+        line-height: 18px;
+        margin-top: 20px;
+      }
+    }
+
+    .video {
+      width: 90vw;
+      height: 310px;
+    }
+  }
 `
 
 export default Container

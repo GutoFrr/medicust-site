@@ -30,7 +30,7 @@ const Container = styled.div`
     p {
       font: 400 20px 'Roboto', sans-serif;
       line-height: 28px;
-      color: #454d5d;
+      color: ${props => props.theme.maincolor.primary};
       margin-bottom: 29px;
     }
 
@@ -133,7 +133,25 @@ const Container = styled.div`
       h1 {
         font: 700 36px 'Ubuntu', sans-serif;
         line-height: 44px;
-        width: 400;
+        width: 400px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    height: 40vh;
+
+    .hero-content {
+      padding-top: 75px;
+
+      h4 {
+        font: 700 15px 'Roboto', sans-serif;
+      }
+
+      h1 {
+        font: 700 30px 'Ubuntu', sans-serif;
+        line-height: 40px;
+        width: 370px;
       }
     }
   }

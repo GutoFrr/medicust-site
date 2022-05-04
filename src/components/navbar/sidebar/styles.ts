@@ -3,12 +3,12 @@ import styled from 'styled-components'
 const Container = styled.div`
   .menu-icon {
     color: #f9f9f9;
-    font-size: 3vw;
+    font-size: 25px;
     cursor: pointer;
   }
 
   .sidebar {
-    width: 26vw;
+    width: 30vw;
     height: 100%;
     position: fixed;
     right: 0;
@@ -18,7 +18,7 @@ const Container = styled.div`
   }
 
   .sidebar.active {
-    right: -26vw;
+    right: -30vw;
   }
 
   .sidebar-title {
@@ -30,7 +30,7 @@ const Container = styled.div`
     color: #f9f9f9;
 
     .close-icon {
-      font-size: 2.7vw;
+      font-size: 30px;
       border-radius: 15px;
       transition: all 0.2s;
       cursor: pointer;
@@ -41,7 +41,7 @@ const Container = styled.div`
     }
 
     h4 {
-      font: 700 2vw 'Ubuntu', sans-serif;
+      font: 700 18px 'Ubuntu', sans-serif;
       cursor: default;
     }
   }
@@ -74,14 +74,14 @@ const Container = styled.div`
 
       .sidebar-icon {
         color: #fff;
-        font-size: 2vw;
+        font-size: 22px;
         vertical-align: sub;
         transition: all 0.3s;
       }
     }
 
     h5 {
-      font: 600 1.7vw 'Ubuntu', sans-serif;
+      font: 600 16px 'Ubuntu', sans-serif;
       color: #fff;
     }
 
@@ -98,35 +98,23 @@ const Container = styled.div`
     }
   }
 
-  @media screen and (max-width: 940px) {
-    .menu-icon {
-      font-size: 3.5vw;
-    }
-
-    .sidebar-item {
-      .icon-container {
-        padding: 8px;
-      }
-    }
-  }
-
   @media screen and (max-width: 640px) {
-    .menu-icon {
-      font-size: 4vw;
-    }
-
     .sidebar {
-      width: 30vw;
+      width: 40vw;
       left: 0;
     }
 
     .sidebar.active {
-      left: -30vw;
+      left: -40vw;
     }
 
     .sidebar-title {
+      h4 {
+        font: 700 18px 'Ubuntu', sans-serif;
+      }
+
       .close-icon {
-        font-size: 3.2vw;
+        font-size: 25px;
       }
     }
 
@@ -134,18 +122,91 @@ const Container = styled.div`
       align-items: flex-end;
 
       .sidebar-item {
-        padding-left: 93vw;
+        padding-left: 83vw;
 
         .icon-container {
           padding: 10px;
 
           .sidebar-icon {
-            font-size: 3vw;
+            font-size: 22px;
           }
         }
 
         h5 {
-          font: 600 1.8vw 'Ubuntu', sans-serif;
+          font: 600 16px 'Ubuntu', sans-serif;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .sidebar-title {
+      h4 {
+        font: 700 17px 'Ubuntu', sans-serif;
+      }
+
+      .close-icon {
+        font-size: 23px;
+      }
+    }
+
+    .sidebar-items {
+      align-items: flex-end;
+
+      .sidebar-item {
+        padding-left: 83vw;
+
+        .icon-container {
+          padding: 8px;
+
+          .sidebar-icon {
+            font-size: 20px;
+          }
+        }
+
+        h5 {
+          font: 600 15px 'Ubuntu', sans-serif;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .sidebar {
+      width: 45vw;
+      left: 0;
+    }
+
+    .sidebar.active {
+      left: -45vw;
+    }
+
+    .sidebar-title {
+      h4 {
+        font: 700 16px 'Ubuntu', sans-serif;
+      }
+
+      .close-icon {
+        font-size: 22px;
+      }
+    }
+
+    .sidebar-items {
+      align-items: flex-end;
+
+      .sidebar-item {
+        padding-left: 80vw;
+
+        .icon-container {
+          padding: 7px;
+
+          .sidebar-icon {
+            font-size: 18px;
+          }
+        }
+
+        h5 {
+          font: 600 14px 'Ubuntu', sans-serif;
         }
       }
     }

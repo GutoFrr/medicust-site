@@ -167,6 +167,23 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 470px) {
+    .blog-banner {
+      h2 {
+        width: 60vw;
+        font: 700 26px 'Ubuntu', sans-serif;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        width: 80vw;
+        font: 400 15px 'Ubuntu', sans-serif;
+        line-height: 24px;
+      }
+    }
+  }
 `
 
 export default Container

@@ -183,9 +183,9 @@ const Container = styled.div`
     }
 
     .post-card-text {
-      width: 40vw;
+      width: 48vw;
       max-width: 273px;
-      height: 300px;
+      height: 280px;
       padding: 24px 34px;
       justify-content: space-around;
 

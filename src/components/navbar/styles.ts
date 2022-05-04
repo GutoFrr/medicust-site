@@ -148,11 +148,12 @@ const Container = styled.div`
 
     .heart-logo {
       display: block;
-      width: 6vw;
+      width: 30px;
     }
 
     .white-space {
       display: block;
+      width: 25px;
     }
   }
 `

@@ -73,6 +73,8 @@ const Container = styled.div`
 
   @media screen and (max-width: 640px) {
     .members-title {
+      margin-bottom: 70px;
+
       h3 {
         font: 700 28px 'Ubuntu', sans-serif;
         line-height: 34px;
@@ -83,6 +85,12 @@ const Container = styled.div`
         line-height: 28px;
         width: auto;
       }
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .members-title {
+      margin-bottom: 50px;
     }
   }
 `
