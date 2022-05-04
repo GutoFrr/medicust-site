@@ -80,6 +80,8 @@ const Container = styled.div`
 
   @media screen and (max-width: 640px) {
     .services-title {
+      padding-bottom: 50px;
+
       h3 {
         font: 700 28px 'Ubuntu', sans-serif;
         line-height: 34px;

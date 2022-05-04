@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 import navArray from '../navData'
 
 const Sidebar = () => {
-  const [openSidebar, setOpenSidebar] = useState(false)
+  const [openSidebar, setOpenSidebar] = useState(true)
   const handleOpenSidebar = () => setOpenSidebar(!openSidebar)
 
   return (

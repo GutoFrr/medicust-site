@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useState } from 'react'
 import Container from './styles'
 import departmentArray from './departmentsData'
@@ -6,30 +7,25 @@ import { Icon } from '@iconify/react'
 interface ServicesProps {
   icon?: string
   department?: string
-  key?: number
+  open?: boolean
 }
 
 const Departments: React.FC<ServicesProps> = () => {
-  const [activeIcon, setActiveIcon] = useState(false)
-  const [selected, setSelected] = useState(0)
-  const handleIconClick = key => {
-    if (selected === key) {
-      setActiveIcon(false)
-    } else {
-      setActiveIcon(true)
-    }
+  const [activeIcon, setActiveIcon] = useState(departmentArray)
 
-    setSelected(key)
+  const handleIconClick = (index: number) => {
+    const tempIcons = activeIcon
+    tempIcons[index].open = !tempIcons[index].open
+    setActiveIcon([...tempIcons])
   }
 
   return (
     <Container>
-      {departmentArray.map((item, key) => (
+      {departmentArray.map((item, index) => (
         <div
-          key={key}
-          onClick={() => handleIconClick(key)}
+          onClick={() => handleIconClick(index)}
           className={`department-item ${
-            activeIcon && key === selected ? 'active' : 'inactive'
+            activeIcon[index].open ? 'active' : 'inactive'
           }`}
         >
           <div className="icon-container">

@@ -79,6 +79,105 @@ const Container = styled.div`
       color: #454d5d;
     }
   }
+
+  @media screen and (max-width: 1670px) {
+    .testimonial-item:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .testimonial-item:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .testimonial-item {
+      width: 350px;
+      height: 340px;
+    }
+
+    .elipses {
+      .gray {
+        width: 60px;
+        height: 60px;
+      }
+
+      .primary {
+        width: 37px;
+        height: 37px;
+      }
+    }
+
+    .testimonial-title {
+      margin-bottom: 30.5px;
+
+      h5 {
+        font: 700 18px 'Ubuntu', sans-serif;
+      }
+
+      h6 {
+        font: 400 14px 'Ubuntu', sans-serif;
+      }
+    }
+
+    .testimonial-text {
+      h5 {
+        font: 700 18px 'Ubuntu', sans-serif;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font: 400 16px 'Ubuntu', sans-serif;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .testimonial-item {
+      width: 330px;
+      height: 320px;
+    }
+
+    .elipses {
+      width: 240px;
+      top: -7%;
+
+      .gray {
+        width: 45px;
+        height: 45px;
+      }
+
+      .primary {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .testimonial-title {
+      margin-bottom: 25px;
+
+      h5 {
+        font: 700 17px 'Ubuntu', sans-serif;
+      }
+
+      h6 {
+        font: 400 14px 'Ubuntu', sans-serif;
+      }
+    }
+
+    .testimonial-text {
+      h5 {
+        font: 700 16px 'Ubuntu', sans-serif;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font: 400 15px 'Ubuntu', sans-serif;
+      }
+    }
+  }
 `
 
 export default Container

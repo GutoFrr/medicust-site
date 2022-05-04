@@ -51,12 +51,13 @@ const Container = styled.div`
   .join-card {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 277px;
     height: 331px;
     background: ${props => props.theme.maincolor.primary};
     border-radius: 12px;
-    padding: 72px 40px 58px 40px;
+    padding-block: 72px 58px;
     text-align: center;
 
     h4 {
@@ -71,6 +72,7 @@ const Container = styled.div`
       line-height: 26px;
       color: #fff;
       margin-bottom: 16px;
+      width: 250px;
     }
 
     .orange-elipse {
@@ -78,6 +80,143 @@ const Container = styled.div`
       height: 58px;
       background: #ff9000;
       border-radius: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .member-item:nth-child(4),
+    .member-item:nth-child(5),
+    .member-item:nth-child(6),
+    .member-item:nth-child(7),
+    .member-item:nth-child(8) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    .member-item {
+      height: 320px;
+    }
+
+    .member-image {
+      width: 260px;
+      height: 230px;
+    }
+
+    .member-description {
+      h3 {
+        font: 700 22px 'Ubuntu', sans-serif;
+        line-height: 55px;
+      }
+
+      h6 {
+        font: 700 14px 'Ubuntu', sans-serif;
+      }
+    }
+
+    .join-card {
+      width: 260px;
+      height: 320px;
+      padding-block: 66px 52px;
+      text-align: center;
+
+      h4 {
+        font: 700 24px 'Ubuntu', sans-serif;
+        line-height: 40px;
+      }
+
+      p {
+        font: 400 16px 'Ubuntu', sans-serif;
+        line-height: 26px;
+      }
+
+      .orange-elipse {
+        width: 56px;
+        height: 56px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 923px) {
+    .member-item {
+      display: none;
+    }
+
+    .member-item:nth-child(1) {
+      display: flex;
+    }
+
+    .member-image {
+      width: 240px;
+      height: 230px;
+    }
+
+    .join-card {
+      width: 240px;
+      height: 320px;
+      padding-block: 66px 52px;
+      text-align: center;
+
+      h4 {
+        font: 700 22px 'Ubuntu', sans-serif;
+        line-height: 30px;
+      }
+
+      p {
+        font: 400 14px 'Ubuntu', sans-serif;
+        line-height: 26px;
+        width: 220px;
+      }
+
+      .orange-elipse {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .member-item {
+      height: 310px;
+    }
+
+    .member-image {
+      width: 230px;
+      height: 210px;
+    }
+
+    .member-description {
+      h3 {
+        font: 700 20px 'Ubuntu', sans-serif;
+        line-height: 55px;
+      }
+
+      h6 {
+        font: 700 13px 'Ubuntu', sans-serif;
+      }
+    }
+
+    .join-card {
+      width: 230px;
+      height: 310px;
+      padding-block: 66px 52px;
+      text-align: center;
+
+      h4 {
+        font: 700 20px 'Ubuntu', sans-serif;
+        line-height: 30px;
+      }
+
+      p {
+        font: 400 14px 'Ubuntu', sans-serif;
+        line-height: 26px;
+        width: 220px;
+      }
+
+      .orange-elipse {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 `

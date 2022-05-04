@@ -148,7 +148,7 @@ const Container = styled.div`
 
     .heart-logo {
       display: block;
-      width: 7vw;
+      width: 6vw;
     }
 
     .white-space {

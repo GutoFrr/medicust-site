@@ -41,12 +41,15 @@ const Container = styled.div`
     }
 
     h4 {
-      font: 700 16px 'Ubuntu', sans-serif;
-      cursor: pointer;
+      font: 700 2vw 'Ubuntu', sans-serif;
+      cursor: default;
     }
   }
 
   .sidebar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-top: 10px;
     padding: 5px;
   }
@@ -58,7 +61,7 @@ const Container = styled.div`
     cursor: pointer;
     background: #323437;
     border-radius: 30px;
-    margin-block: 7px;
+    margin-block: 6px;
     width: 120vw;
     transition: all 0.3s;
 
@@ -78,7 +81,7 @@ const Container = styled.div`
     }
 
     h5 {
-      font: 600 14px 'Ubuntu', sans-serif;
+      font: 600 1.7vw 'Ubuntu', sans-serif;
       color: #fff;
     }
 
@@ -99,6 +102,12 @@ const Container = styled.div`
     .menu-icon {
       font-size: 3.5vw;
     }
+
+    .sidebar-item {
+      .icon-container {
+        padding: 8px;
+      }
+    }
   }
 
   @media screen and (max-width: 640px) {
@@ -107,11 +116,38 @@ const Container = styled.div`
     }
 
     .sidebar {
+      width: 30vw;
       left: 0;
     }
 
     .sidebar.active {
-      left: -26vw;
+      left: -30vw;
+    }
+
+    .sidebar-title {
+      .close-icon {
+        font-size: 3.2vw;
+      }
+    }
+
+    .sidebar-items {
+      align-items: flex-end;
+
+      .sidebar-item {
+        padding-left: 93vw;
+
+        .icon-container {
+          padding: 10px;
+
+          .sidebar-icon {
+            font-size: 3vw;
+          }
+        }
+
+        h5 {
+          font: 600 1.8vw 'Ubuntu', sans-serif;
+        }
+      }
     }
   }
 `
