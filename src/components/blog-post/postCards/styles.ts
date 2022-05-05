@@ -11,6 +11,7 @@ const Container = styled.div`
     background: #eff3f6;
     border: 3px solid #eff3f6;
     border-radius: 12px;
+    margin-top: 67px;
     transition: all 0.3s;
 
     :hover {

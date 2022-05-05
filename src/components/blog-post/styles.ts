@@ -20,7 +20,6 @@ const Container = styled.div`
     background-color: ${props => props.theme.maincolor.secundary};
     background-image: url(${backgroundScribbles});
     background-repeat: no-repeat;
-    margin-bottom: 67px;
 
     h2 {
       width: 360px;
