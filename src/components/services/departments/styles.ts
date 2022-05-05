@@ -98,24 +98,6 @@ const Container = styled.div`
       }
     }
 
-    .department-container.inactive {
-      .department-item:nth-child(6),
-      .department-item:nth-child(7),
-      .department-item:nth-child(8),
-      .department-item:nth-child(9) {
-        display: none;
-        opacity: 0inherit;
-      }
-
-      .department-item:nth-child(2),
-      .department-item:nth-child(3),
-      .department-item:nth-child(4),
-      .department-item:nth-child(5) {
-        display: flex;
-        opacity: 1;
-      }
-    }
-
     .department-item:nth-child(6),
     .department-item:nth-child(7) {
       display: none;
@@ -201,6 +183,22 @@ const Container = styled.div`
           width: 40px;
           height: 40px;
         }
+      }
+    }
+
+    .left-arrow {
+      right: 63vw;
+
+      :hover {
+        right: 65vw;
+      }
+    }
+
+    .right-arrow {
+      left: 63vw;
+
+      :hover {
+        left: 65vw;
       }
     }
   }
