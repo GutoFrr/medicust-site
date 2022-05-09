@@ -14,6 +14,11 @@ const Departments: React.FC<ServicesProps> = () => {
   const [activeIcon, setActiveIcon] = useState(departmentArray)
   const handleIconClick = (index: number) => {
     const tempIcons = activeIcon
+    tempIcons.forEach((tempIcon, index2) => {
+      if (index !== index2) {
+        tempIcon.active = false
+      }
+    })
     tempIcons[index].active = !tempIcons[index].active
     setActiveIcon([...tempIcons])
   }
