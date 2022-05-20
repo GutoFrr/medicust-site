@@ -8,9 +8,10 @@ interface ServicesProps {
   icon?: string
   department?: string
   active?: boolean
+  position: number
 }
 
-const Departments: React.FC<ServicesProps> = () => {
+const Departments: React.FC<ServicesProps> = ({ position }) => {
   const [activeIcon, setActiveIcon] = useState(departmentArray)
   const handleIconClick = (index: number) => {
     const tempIcons = activeIcon
@@ -23,21 +24,12 @@ const Departments: React.FC<ServicesProps> = () => {
     setActiveIcon([...tempIcons])
   }
 
-  const [showDepartment, setShowDepartment] = useState(false)
-  const handleShowDepartment = () => setShowDepartment(!showDepartment)
-
   return (
-    <Container>
-      <div
-        className={`department-container ${
-          showDepartment ? 'active' : 'inactive'
-        }`}
-      >
-        <Icon
-          icon="bi:arrow-left-square-fill"
-          className="left-arrow arrow"
-          onClick={handleShowDepartment}
-        />
+    <Container
+      marginLeft={(position * 588).toString() + 'px'}
+      marginRight={(position * 588).toString() + 'px'}
+    >
+      <div className="department-container">
         {departmentArray.map((item, index) => (
           <div
             onClick={() => handleIconClick(index)}
@@ -51,11 +43,6 @@ const Departments: React.FC<ServicesProps> = () => {
             <h4>{item.department}</h4>
           </div>
         ))}
-        <Icon
-          icon="bi:arrow-right-square-fill"
-          className="right-arrow arrow"
-          onClick={handleShowDepartment}
-        />
       </div>
     </Container>
   )

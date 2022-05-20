@@ -5,6 +5,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   .services {
     padding: 0 19.5vw;
@@ -31,6 +32,45 @@ const Container = styled.div`
       font: 400 16px 'Ubuntu', sans-serif;
       line-height: 30px;
       width: 608px;
+    }
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  @media screen and (max-width: 1259px) {
+    .arrow {
+      display: block;
+      position: absolute;
+      top: 37.2%;
+      font-size: 25px;
+      color: ${props => props.theme.maincolor.primary};
+      width: 100px;
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+      z-index: 4;
+
+      :active {
+        transition: all 0.1s;
+        color: #62b6ff;
+      }
+    }
+
+    .left-arrow {
+      left: 8vw;
+
+      :hover {
+        left: 6vw;
+      }
+    }
+
+    .right-arrow {
+      right: 8vw;
+
+      :hover {
+        right: 6vw;
+      }
     }
   }
 

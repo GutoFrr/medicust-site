@@ -1,8 +1,19 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
+interface ContainerProps {
+  marginLeft: string | number
+  marginRight: string | number
+}
+
+const Container = styled.div<ContainerProps>`
+  padding: 0 19.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   .department-container {
-    width: 70vw;
+    width: 1176px;
+    min-width: 1176px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -67,79 +78,37 @@ const Container = styled.div`
     border: 2px solid ${props => props.theme.maincolor.primary};
   }
 
-  .arrow {
-    display: none;
-  }
-
-  @media screen and (max-width: 1681px) {
-    .department-item:nth-child(8),
-    .department-item:nth-child(9) {
-      display: none;
-    }
-  }
-
   @media screen and (max-width: 1259px) {
-    .department-container.active {
-      transition: all 0.4s ease;
-      .department-item:nth-child(6),
-      .department-item:nth-child(7),
-      .department-item:nth-child(8),
-      .department-item:nth-child(9) {
-        display: flex;
-        opacity: 1;
-      }
-
-      .department-item:nth-child(2),
-      .department-item:nth-child(3),
-      .department-item:nth-child(4),
-      .department-item:nth-child(5) {
-        display: none;
-        opacity: 0;
-      }
+    .department-container {
+      width: 588px;
+      min-width: 588px;
+      height: 588px;
+      max-height: 588px;
+      overflow: hidden;
     }
 
+    .department-item:nth-child(1),
+    .department-item:nth-child(2),
+    .department-item:nth-child(3),
+    .department-item:nth-child(4) {
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-left: ${props => props.marginLeft};
+    }
+
+    .department-item:nth-child(5),
     .department-item:nth-child(6),
-    .department-item:nth-child(7) {
-      display: none;
-    }
-
-    .arrow {
-      display: block;
-      position: absolute;
-      font-size: 25px;
-      color: ${props => props.theme.maincolor.primary};
-      width: 100px;
-      transition: all 0.3s ease-in;
-      cursor: pointer;
-
-      :active {
-        transition: all 0.1s;
-        color: #62b6ff;
-      }
-    }
-
-    .left-arrow {
-      right: 67vw;
-
-      :hover {
-        right: 69vw;
-      }
-    }
-
-    .right-arrow {
-      left: 67vw;
-
-      :hover {
-        left: 69vw;
-      }
+    .department-item:nth-child(7),
+    .department-item:nth-child(8) {
+      position: relative;
+      top: -100%;
+      right: ${props => props.marginRight};
     }
   }
 
   @media screen and (max-width: 1150px) {
     .department-item {
-      width: 280px;
-      height: 280px;
-
       h4 {
         font: 700 26px 'Ubuntu', sans-serif;
         line-height: 55px;
@@ -183,22 +152,6 @@ const Container = styled.div`
           width: 40px;
           height: 40px;
         }
-      }
-    }
-
-    .left-arrow {
-      right: 63vw;
-
-      :hover {
-        right: 65vw;
-      }
-    }
-
-    .right-arrow {
-      left: 63vw;
-
-      :hover {
-        left: 65vw;
       }
     }
   }

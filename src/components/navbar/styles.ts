@@ -3,6 +3,9 @@ import styled from 'styled-components'
 const Container = styled.div`
   background: ${props => props.theme.maincolor.primary};
   padding: 0 19.5vw;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 
   .navbar {
     height: 78px;

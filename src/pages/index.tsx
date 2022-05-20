@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { Container } from '../styles/pages/Home'
 import Hero from '../components/hero'
 import Header from '../components/header'
+import Navbar from '../components/navbar'
 import CTA from '../components/CTA'
 import Services from '../components/services'
 import TeamMembers from '../components/team-members'
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
         <title>Medicust</title>
       </Head>
       <Header />
+      <Navbar />
       <Hero />
       <CTA />
       <Services />

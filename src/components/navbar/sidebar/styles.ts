@@ -13,6 +13,7 @@ const Container = styled.div`
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 3000;
     background: #1f2122;
     transition: all 0.3s;
   }
