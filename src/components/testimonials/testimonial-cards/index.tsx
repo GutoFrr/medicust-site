@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import Container from './styles'
 import testimonialCards from './testimonialData'
@@ -13,8 +12,8 @@ interface TestimonialProps {
 const TestimonialCards: React.FC<TestimonialProps> = () => {
   return (
     <Container>
-      {testimonialCards.map(item => (
-        <div className="testimonial-item">
+      {testimonialCards.map((item, key) => (
+        <div className="testimonial-item" key={key}>
           <div className="elipses">
             <div className="gray"></div>
             <div className="primary"></div>

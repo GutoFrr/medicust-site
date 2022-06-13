@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import postCards from './postCardsData'
 import Container from './styles'
@@ -6,8 +5,8 @@ import Container from './styles'
 const PostCards = () => {
   return (
     <Container>
-      {postCards.map(item => (
-        <div className="post-card-item">
+      {postCards.map((item, key) => (
+        <div className="post-card-item" key={key}>
           <div>{item.image}</div>
           <div className="post-card-text">
             <p className="date">{item.date}</p>

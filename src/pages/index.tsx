@@ -19,6 +19,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Medicust</title>
       </Head>
+
       <Header />
       <Navbar />
       <Hero />

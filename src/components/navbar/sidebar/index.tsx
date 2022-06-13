@@ -1,8 +1,8 @@
-/* eslint-disable react/jsx-key */
 import React, { useState } from 'react'
 import Container from './styles'
 import { Icon } from '@iconify/react'
 import navArray from '../navData'
+import Link from 'next/link'
 
 const Sidebar = () => {
   const [openSidebar, setOpenSidebar] = useState(true)
@@ -27,16 +27,18 @@ const Sidebar = () => {
             onClick={handleOpenSidebar}
           />
         </div>
-        <div className="sidebar-items">
-          {navArray.map(item => (
-            <div className="sidebar-item">
-              <div className="icon-container">
-                <Icon icon={item.menuIcon} className="sidebar-icon" />
-              </div>
-              <h5>{item.menuItem}</h5>
-            </div>
+        <ul className="sidebar-items">
+          {navArray.map((item, key) => (
+            <Link href={'#' + item.menuItem} key={key}>
+              <li className="sidebar-item">
+                <div className="icon-container">
+                  <Icon icon={item.menuIcon} className="sidebar-icon" />
+                </div>
+                <h5>{item.menuItem}</h5>
+              </li>
+            </Link>
           ))}
-        </div>
+        </ul>
       </div>
     </Container>
   )

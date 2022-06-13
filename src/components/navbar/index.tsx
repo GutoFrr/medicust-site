@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import Container from './styles'
 import navArray from './navData'
@@ -15,13 +14,13 @@ interface NavProps {
 
 const Navbar: React.FC<NavProps> = () => {
   return (
-    <Container>
+    <Container id="Home">
       <div className="navbar">
         <img src={logo} alt="Logo Medicust" className="logo" />
 
         <ul className="nav-menu">
-          {navArray.map(item => (
-            <Link href={'#' + item.menuItem}>
+          {navArray.map((item, key) => (
+            <Link href={'#' + item.menuItem} key={key}>
               <li className="menu-item">{item.menuItem}</li>
             </Link>
           ))}

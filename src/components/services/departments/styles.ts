@@ -2,14 +2,16 @@ import styled from 'styled-components'
 
 interface ContainerProps {
   marginLeft: string | number
-  marginRight: string | number
 }
 
 const Container = styled.div<ContainerProps>`
   padding: 0 19.3vw;
+  height: 820px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 
   .department-container {
     width: 1176px;
@@ -20,7 +22,6 @@ const Container = styled.div<ContainerProps>`
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 223px;
-    position: relative;
   }
 
   .department-item {
@@ -81,29 +82,10 @@ const Container = styled.div<ContainerProps>`
   @media screen and (max-width: 1259px) {
     .department-container {
       width: 588px;
-      min-width: 588px;
       height: 588px;
-      max-height: 588px;
-      overflow: hidden;
-    }
-
-    .department-item:nth-child(1),
-    .department-item:nth-child(2),
-    .department-item:nth-child(3),
-    .department-item:nth-child(4) {
-      position: relative;
-      top: 0;
-      left: 0;
-      margin-left: ${props => props.marginLeft};
-    }
-
-    .department-item:nth-child(5),
-    .department-item:nth-child(6),
-    .department-item:nth-child(7),
-    .department-item:nth-child(8) {
-      position: relative;
-      top: -100%;
-      right: ${props => props.marginRight};
+      position: absolute;
+      left: ${props => props.marginLeft};
+      transition: all 0.5s ease-in-out;
     }
   }
 
@@ -126,11 +108,14 @@ const Container = styled.div<ContainerProps>`
   }
 
   @media screen and (max-width: 800px) {
-    .department-item {
-      display: none;
+    padding: 0 147px;
+    height: 588px;
+
+    .department-container {
+      width: max-content;
     }
 
-    .department-item:nth-child(2) {
+    .department-item {
       display: flex;
     }
   }

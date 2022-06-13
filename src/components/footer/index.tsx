@@ -7,7 +7,7 @@ import logo from '../../assets/footer-images/logo.png'
 
 const Footer = () => {
   return (
-    <Container>
+    <Container id="Contact">
       <div className="footer">
         <div className="footer-content">
           <div className="medicust-column">

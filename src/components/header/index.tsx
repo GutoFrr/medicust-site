@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../layout/styles'
-import Navbar from '../navbar'
 import Container from './styles'
 
 const Header = () => {

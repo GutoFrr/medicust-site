@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React from 'react'
 import Container from './styles'
 import membersArray from './membersData'
@@ -11,8 +10,8 @@ interface MembersProps {
 const Members: React.FC<MembersProps> = () => {
   return (
     <Container>
-      {membersArray.map(item => (
-        <div className="member-item">
+      {membersArray.map((item, key) => (
+        <div className="member-item" key={key}>
           <div className="member-image"></div>
           <div className="member-description">
             <h3>{item.name}</h3>

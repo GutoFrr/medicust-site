@@ -1,5 +1,4 @@
-/* eslint-disable react/jsx-key */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from './styles'
 import departmentArray from './departmentsData'
 import { Icon } from '@iconify/react'
@@ -24,11 +23,17 @@ const Departments: React.FC<ServicesProps> = ({ position }) => {
     setActiveIcon([...tempIcons])
   }
 
+  const [scrollWidth, setScrollWidth] = useState<number>()
+  useEffect(() => {
+    if (window.innerWidth >= 1259) {
+      setScrollWidth(588)
+    } else if (window.innerWidth <= 800) {
+      setScrollWidth(294)
+    }
+  })
+
   return (
-    <Container
-      marginLeft={(position * 588).toString() + 'px'}
-      marginRight={(position * 588).toString() + 'px'}
-    >
+    <Container marginLeft={(position * scrollWidth).toString() + 'px'}>
       <div className="department-container">
         {departmentArray.map((item, index) => (
           <div
@@ -36,6 +41,7 @@ const Departments: React.FC<ServicesProps> = ({ position }) => {
             className={`department-item ${
               activeIcon[index].active ? 'active' : 'inactive'
             }`}
+            key={index}
           >
             <div className="icon-container">
               <Icon icon={item.icon} className="department-icon" />

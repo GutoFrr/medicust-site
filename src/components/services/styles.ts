@@ -8,7 +8,7 @@ const Container = styled.div`
   position: relative;
 
   .services {
-    padding: 0 19.5vw;
+    padding: 0 19.3vw;
     background: #f8f8f8;
   }
 
@@ -37,19 +37,27 @@ const Container = styled.div`
 
   .arrow {
     display: none;
+    position: absolute;
+    top: 37.2%;
+    font-size: 25px;
+    color: ${props => props.theme.maincolor.primary};
+    width: 100px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    z-index: 2;
   }
 
   @media screen and (max-width: 1259px) {
+    .department {
+      width: 588px;
+    }
+
+    .services {
+      padding: 0 335px;
+    }
+
     .arrow {
       display: block;
-      position: absolute;
-      top: 37.2%;
-      font-size: 25px;
-      color: ${props => props.theme.maincolor.primary};
-      width: 100px;
-      transition: all 0.3s ease-in;
-      cursor: pointer;
-      z-index: 4;
 
       :active {
         transition: all 0.1s;
@@ -101,6 +109,26 @@ const Container = styled.div`
         width: 500px;
       }
     }
+
+    .arrow {
+      top: 32.3%;
+    }
+
+    .left-arrow {
+      left: 6vw;
+
+      :hover {
+        left: 5vw;
+      }
+    }
+
+    .right-arrow {
+      right: 6vw;
+
+      :hover {
+        right: 5vw;
+      }
+    }
   }
 
   @media screen and (max-width: 960px) {
@@ -115,6 +143,32 @@ const Container = styled.div`
         line-height: 28px;
         width: auto;
       }
+    }
+
+    .left-arrow {
+      left: 5vw;
+
+      :hover {
+        left: 4vw;
+      }
+    }
+
+    .right-arrow {
+      right: 5vw;
+
+      :hover {
+        right: 4vw;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .department {
+      width: 250px;
+    }
+
+    .arrow {
+      top: 33.5%;
     }
   }
 

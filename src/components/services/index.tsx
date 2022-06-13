@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import React, { useState } from 'react'
 import Container from './styles'
 import Departments from './departments'
@@ -6,22 +5,21 @@ import Advertising from '../advertising'
 import { Icon } from '@iconify/react'
 
 const Services = () => {
-  const [scrollDepartment, setScrollDepartment] = useState<number>(-1)
+  const [scrollDepartment, setScrollDepartment] = useState<number>(0)
   const handleScrollDepartment = (direction: 'foward' | 'backward') => {
-    if (direction === 'foward') {
-      setScrollDepartment(scrollDepartment > -1 ? scrollDepartment - 1 : 0)
-    } else if (direction === 'backward') {
-      setScrollDepartment(scrollDepartment < 0 ? scrollDepartment + 1 : -1)
+    if (window.innerWidth >= 1259) {
+      if (direction === 'foward') {
+        setScrollDepartment(scrollDepartment > -1 ? scrollDepartment - 1 : 0)
+      } else if (direction === 'backward') {
+        setScrollDepartment(scrollDepartment < 0 ? scrollDepartment + 1 : -1)
+      }
+    } else if (window.innerWidth <= 800) {
+      if (direction === 'foward') {
+        setScrollDepartment(scrollDepartment > -7 ? scrollDepartment - 1 : 0)
+      } else if (direction === 'backward') {
+        setScrollDepartment(scrollDepartment < 0 ? scrollDepartment + 1 : -7)
+      }
     }
-
-    // if (window.outerWidth <= 1259) {
-    // } else if (window.outerWidth <= 800) {
-    //   if (direction === 'foward') {
-    //     setScrollDepartment(scrollDepartment > -7 ? scrollDepartment - 1 : 0)
-    //   } else if (direction === 'backward') {
-    //     setScrollDepartment(scrollDepartment < 0 ? scrollDepartment + 1 : -7)
-    //   }
-    // }
   }
 
   return (
@@ -35,19 +33,19 @@ const Services = () => {
             laborum.
           </p>
         </div>
+        <Icon
+          icon="bi:arrow-left-square-fill"
+          className="left-arrow arrow"
+          onClick={() => handleScrollDepartment('backward')}
+        />
         <div className="department">
-          <Icon
-            icon="bi:arrow-left-square-fill"
-            className="left-arrow arrow"
-            onClick={() => handleScrollDepartment('backward')}
-          />
           <Departments position={scrollDepartment} />
-          <Icon
-            icon="bi:arrow-right-square-fill"
-            className="right-arrow arrow"
-            onClick={() => handleScrollDepartment('foward')}
-          />
         </div>
+        <Icon
+          icon="bi:arrow-right-square-fill"
+          className="right-arrow arrow"
+          onClick={() => handleScrollDepartment('foward')}
+        />
       </div>
       <Advertising />
     </Container>
