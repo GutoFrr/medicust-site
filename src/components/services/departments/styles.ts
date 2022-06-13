@@ -113,6 +113,7 @@ const Container = styled.div<ContainerProps>`
 
     .department-container {
       width: max-content;
+      transition: all 0.3s ease-in-out;
     }
 
     .department-item {

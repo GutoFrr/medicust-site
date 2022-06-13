@@ -178,6 +178,28 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 480px) {
+    .testimonial-item {
+      height: 50vh;
+      max-height: 350px;
+    }
+
+    .elipses {
+      width: 50vw;
+      top: -7%;
+
+      .gray {
+        width: 45px;
+        height: 45px;
+      }
+
+      .primary {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
 `
 
 export default Container

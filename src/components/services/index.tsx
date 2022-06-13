@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react'
 const Services = () => {
   const [scrollDepartment, setScrollDepartment] = useState<number>(0)
   const handleScrollDepartment = (direction: 'foward' | 'backward') => {
-    if (window.innerWidth >= 1259) {
+    if (window.innerWidth > 800) {
       if (direction === 'foward') {
         setScrollDepartment(scrollDepartment > -1 ? scrollDepartment - 1 : 0)
       } else if (direction === 'backward') {

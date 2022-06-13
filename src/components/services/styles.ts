@@ -50,6 +50,7 @@ const Container = styled.div`
   @media screen and (max-width: 1259px) {
     .department {
       width: 588px;
+      overflow: hidden;
     }
 
     .services {
@@ -164,15 +165,19 @@ const Container = styled.div`
 
   @media screen and (max-width: 800px) {
     .department {
-      width: 250px;
+      width: 294px;
     }
 
     .arrow {
-      top: 33.5%;
+      top: 32%;
     }
   }
 
   @media screen and (max-width: 640px) {
+    .department {
+      width: 260px;
+    }
+
     .services-title {
       padding-bottom: 50px;
 
@@ -186,6 +191,10 @@ const Container = styled.div`
         line-height: 28px;
         width: auto;
       }
+    }
+
+    .arrow {
+      top: 33.5%;
     }
   }
 `

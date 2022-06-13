@@ -23,12 +23,14 @@ const Departments: React.FC<ServicesProps> = ({ position }) => {
     setActiveIcon([...tempIcons])
   }
 
-  const [scrollWidth, setScrollWidth] = useState<number>()
+  const [scrollWidth, setScrollWidth] = useState<number>(0)
   useEffect(() => {
-    if (window.innerWidth >= 1259) {
+    if (window.innerWidth >= 800) {
       setScrollWidth(588)
-    } else if (window.innerWidth <= 800) {
+    } else if (window.innerWidth > 640) {
       setScrollWidth(294)
+    } else if (window.innerWidth <= 640) {
+      setScrollWidth(260)
     }
   })
 
